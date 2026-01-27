@@ -1,0 +1,30 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Environments ---
+venv/
+env/
+.venv/
+.env
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints
+
+*.csv
+*.zip
+*.tar.gz
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.pkl
+data/
+models/
+wandb/
+
+# --- OS & IDE ---
+.DS_Store
+.vscode/
