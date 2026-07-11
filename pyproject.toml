@@ -12,4 +12,7 @@ dependencies = [
   "jupyterlab",
   "tiktoken",
   "pandas>=3.0.0",
+  "tokenizers>=0.22.2",
+  "colorlog>=6.10.1",
+  "pytest>=9.1.1",
 ]
