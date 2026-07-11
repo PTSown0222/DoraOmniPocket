@@ -13,6 +13,69 @@ class MLP(nn.Module):
     Args:
         n_embed (int): The dimensionality of the input embedding.
     """
-    def __init__(self, n_embed: int):
-        super().__init__(self):
-        
+    def __init__(self, n_embed: int) -> None:
+        super().__init__()
+        """
+        Initializes the MLP module.
+
+        Args:
+            n_embed (int): The dimensionality of the input embedding.
+        """
+        self.hidden = nn.Linear(n_embed, 4 * n_embed)
+        self.relu = nn.ReLU()
+        self.proj = nn.Linear(4 * n_embed, n_embed)
+    
+    def forward(self, x: Tensor) -> Tensor:
+        """
+        Forward pass through the MLP.
+
+        Args:
+            x (torch.Tensor): Input tensor of shape (B, T, C), where B is batch size,
+                              T is sequence length, and C is embedding size.
+
+        Returns:
+            torch.Tensor: Output tensor of the same shape as the input.
+        """
+
+        x = self.forward_embedding(x)
+        x = self.project_embedding(x)
+        return x
+    
+    def forward_embedding(self, x: Tensor) -> Tensor:
+        """
+        Applies the hidden linear layer followed by ReLU activation.
+
+        Args:
+            x (torch.Tensor): Input tensor.
+
+        Returns:
+            torch.Tensor: Output after the hidden layer and ReLU.
+        """
+        x = self.relu(self.hidden(x))
+        return x
+
+    def project_embedding(self, x: Tensor) -> Tensor:
+        """
+        Applies the projection linear layer.
+
+        Args:
+            x (torch.Tensor): Input tensor.
+
+        Returns:
+            torch.Tensor: Output after the projection layer.
+        """
+        x = self.proj(x)
+        return x
+
+if __name__ == '__main__':
+    # Example Usage (optional, for testing the module independently)
+    batch_size = 2
+    sequence_length = 3
+    embedding_dim = 16
+    input_tensor = torch.randn(batch_size, sequence_length, embedding_dim)
+
+    mlp_module = MLP(n_embed=embedding_dim)
+    output_tensor = mlp_module(input_tensor)
+
+    print("MLP Input Shape:", input_tensor.shape)
+    print("MLP Output Shape:", output_tensor.shape)
