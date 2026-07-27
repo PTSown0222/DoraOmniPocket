@@ -35,6 +35,8 @@
 
 **DoraPocket - LLMOpsSys** is a unified Large Language Model (LLM) ecosystem engineered specifically for Vietnamese Natural Language Processing and Multimodal AI workflows. The system encapsulates full end-to-end Machine Learning pipelines—ranging from model training, fine-tuning, and dynamic Mixture-of-Experts (MoE) optimizations to agentic Retrieval-Augmented Generation (RAG) and interactive web frontend interfaces.
 
+**You can look for my Temporal-Moes idea at here: `10.18653/v1/2026.semeval-1.25`**
+
 ---
 
 ## ✨ Key Highlights
@@ -64,19 +66,13 @@
 
 ---
 
-## 🤗 Hugging Face Models & Pretrained Weights
+## 🤗 Hugging Face Models & Live Demos
+We publicly release our pretrained model weights and interactive web application demos on Hugging Face:
 
-
-We publicly release our pretrained weights, custom architectures, and interactive demos on Hugging Face:
-
-
-
-
-| Model Repository / Space | Architecture / Backbone | Task Focus | Model Weights / Demo |
-| :--- | :--- | :--- | :---: |
-| [`TheSon2202/Temporal-MoEs-RoBERTa`](https://huggingface.co/TheSon2202/Temporal-MoEs-RoBERTa) | Temporal MoE + RoBERTa | Action State Change & Continuous Emotion | [Model Weights](https://huggingface.co/TheSon2202/Temporal-MoEs-RoBERTa) |
-| [`TheSon2202/bamibert-moe-sentiment`](https://huggingface.co/TheSon2202/bamibert-moe-sentiment) | MoEs + BamiBert | Vietnamese Sentiment & Emotion Dynamics | [Model Weights](https://huggingface.co/TheSon2202/bamibert-moe-sentiment) |
-
+| Model / Architecture | Backbone | Pretrained Weights | Live Web Demo |
+| :--- | :--- | :---: | :---: |
+| **BamiBert MoE Sentiment** | BamiBert | [Download Weights ↗](https://huggingface.co/TheSon2202/bamibert-moe-sentiment) | [Launch Space Demo ↗](https://huggingface.co/spaces/TheSon2202/bamibert-moe-vietnamese-sentiment-analytst) |
+| **Temporal MoEs RoBERTa** | RoBERTa | [Download Weights ↗](https://huggingface.co/TheSon2202/Temporal-MoEs-RoBERTa) | [Launch Space Demo ↗](https://huggingface.co/spaces/TheSon2202/temporal-moes-roberta-sentiment) |
 
 ---
 

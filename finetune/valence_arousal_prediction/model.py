@@ -10,6 +10,7 @@ class AttentionPooling(nn.Module):
             nn.GELU(),
             nn.Linear(in_dim, 1)
         )
+        
     def forward(self, last_hidden_state, attention_mask):
         # last_hidden_state: [Batch, Seq, Hidden]
 
