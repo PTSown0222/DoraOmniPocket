@@ -1,6 +1,9 @@
 <div align="center">
-
-# 🚀 DoraPocket - LLMOpsSys: Anything LLMs for Vietnamese Models
+  
+<h1 align="center">
+  <img src="https://github.com/user-attachments/assets/14d5160d-adf7-4606-9ba4-4b8e9ebbb635" width="40" height="40" align="absmiddle" alt="dora-emo">
+  DoraPocket - LLMOpsSys: Anything LLMs for Vietnamese Models
+</h1>
 
 <!-- Core Stack & Framework Badges -->
 <p align="center">
@@ -18,12 +21,9 @@
 **An End-to-End Open-Source LLMOps Framework for Vietnamese & Multimodal LLMs**  
 *Fine-Tuning, Temporal Mixture-of-Experts (MoE), Vision-Language Models, Agentic RAG, and Streamlit Deployment.*
 
-<br />
-
-<!-- Circular Crop CSS to blend background seamlessly -->
-<img src="assets/dora.png" alt="LLMOps System Architecture" width="160" style="border-radius: 50%; object-fit: cover; box-shadow: 0px 4px 12px rgba(0,0,0,0.15);">
-
-<br />
+<p align="center">
+  <img src="assets/dora.png" alt="DoraPocket Logo" width="160">
+</p>
 
 [Overview](#-overview) • [Key Highlights](#-key-highlights) • [Supported Models & Modules](#-supported-models--modules) • [Pretrained Weights](#-hugging-face-models--pretrained-weights) • [Installation](#%EF%B8%8F-installation) • [Quick Start](#-quick-start) • [Citation](#-Citation)
 
