@@ -9,7 +9,6 @@ from minigemma3.transformer_block import TransformerBlock
 from minigemma3.normalization import RMSNorm
 from minigemma3.rope import compute_rope_params
 
-
 class Gemma3Model(nn.Module):
     """
     The main Gemma3 model class.

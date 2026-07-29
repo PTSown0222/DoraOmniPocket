@@ -1,16 +1,40 @@
-import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel as DDP
  
-# Initialize the distributed environment
-dist.init_process_group(backend="nccl")
-rank = dist.get_rank()
-local_rank = int(os.environ["LOCAL_RANK"])
-world_size = dist.get_world_size()
-device = torch.device(f"cuda:{local_rank}")
-print(f"World size: {world_size}, Rank: {rank}, Local rank: {local_rank}. Using device: {device}")
- 
-# Create pretraining model with default config, then wrap it in DDP
-model_config = LlamaConfig()
-model = LlamaForPretraining(model_config).to(rank)
-model = DDP(model, device_ids=[local_rank])  # , output_device=local_rank)
-model.train()
+import gc
+import time
+import torch
+
+def calculate_size(model):
+    
+    total_params = sum(p.numel() for p in model.parameters())
+    print(f"Total number of parameters: {total_params:,}")
+
+    total_params =  total_params - sum(p.numel() for p in model.out_head.parameters())
+    print(f"Number of trainable parameters considering weight tying: {total_params:,}")
+    
+    # Calculate the total size in bytes (assuming float32, 4 bytes per parameter)
+    total_size_bytes = total_params * 4
+    
+    # Convert to megabytes
+    total_size_mb = total_size_bytes / (1024 * 1024)
+    
+    print(f"Total size of the model: {total_size_mb:.2f} MB")
+
+def start_memory_tracking():
+    """Initialize GPU memory tracking."""
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats()
+    else:
+        print("This notebook is intended for CUDA GPUs but CUDA is not available.")
+
+def print_memory_usage():
+    max_gpu_memory = torch.cuda.max_memory_allocated() / (1024 ** 3)  # Convert bytes to GB
+    print(f"Maximum GPU memory allocated: {max_gpu_memory:.1f} GB")
+
+def cleanup():
+    gc.collect()
+    torch.cuda.empty_cache()
+    time.sleep(3) 
+    torch.cuda.reset_peak_memory_stats()
+    max_memory_allocated = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+    print(f"Maximum GPU memory allocated: {max_memory_allocated:.1f} GB")
+
