@@ -2,7 +2,7 @@
   
 <h1 align="center">
   <img src="https://github.com/user-attachments/assets/14d5160d-adf7-4606-9ba4-4b8e9ebbb635" width="40" height="40" align="absmiddle" alt="dora-emo">
-  DoraPocket - LLMOpsSys: Anything LLMs for Vietnamese Models
+  DoraPocket - Anything SLMs 🔔
 </h1>
 
 <!-- Core Stack & Framework Badges -->
