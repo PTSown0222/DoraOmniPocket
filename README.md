@@ -98,7 +98,7 @@ source .venv/bin/activate
 uv pip install -r pyproject.toml
 ```
 
-## Citation
+## 🦥 Citation
 
 If you use the ideas of Temporal-Moes, please cite this paper
 
