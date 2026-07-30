@@ -76,7 +76,6 @@ class SparseMoELayer(nn.Module):
 
         return final_output
 
-
 class ValenceAndArousalModel(nn.Module):
     def __init__(self, model_name, num_experts=4, top_k=2):
         super().__init__()

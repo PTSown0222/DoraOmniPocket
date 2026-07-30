@@ -9,7 +9,6 @@ from datasets import load_dataset
 from tokenizers import Tokenizer
 from torch import Tensor
 
-
 # BERT config and model defined previously
 @dataclasses.dataclass
 class BertConfig:
