@@ -1,5 +1,5 @@
 """
-Flash Attention integration for nanoKimi.
+Flash Attention integration for DoraModel
 
 This module provides efficient attention implementations using Flash Attention
 for improved memory usage and speed during training and inference.

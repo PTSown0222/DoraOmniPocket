@@ -1,5 +1,5 @@
 """
-Mixture of Experts (MoE) implementation for nanoKimi.
+Mixture of Experts (MoE) implementation for model.
 
 This module implements a sparse MoE layer with top-k routing,
 load balancing, and efficient expert selection mechanisms.
