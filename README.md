@@ -73,7 +73,7 @@ We publicly release our pretrained model weights and interactive web application
 | :--- | :--- | :---: | :---: |
 | **BamiBert MoE Sentiment** | BamiBert | [Download Weights ↗](https://huggingface.co/TheSon2202/bamibert-moe-sentiment) | [Launch Space Demo ↗](https://huggingface.co/spaces/TheSon2202/bamibert-moe-vietnamese-sentiment-analytst) |
 | **Temporal MoEs RoBERTa** | RoBERTa | [Download Weights ↗](https://huggingface.co/TheSon2202/Temporal-MoEs-RoBERTa) | [Launch Space Demo ↗](https://huggingface.co/spaces/TheSon2202/temporal-moes-roberta-sentiment) |
-
+| **Manim Python Coder** | Mistral-7B | [Download Weights ↗](https://huggingface.co/TheSon2202/mistral-manim-python-coder-v01) | ❌ |
 ---
 
 ## 🛠️ Installation
