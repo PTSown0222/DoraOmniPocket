@@ -3,7 +3,7 @@ from transformers.models.llama.modeling_llama import *
 
 ### BitLinear definition Source: https://github.com/microsoft/unilm/blob/master/bitnet/The-Era-of-1-bit-LLMs__Training_Tips_Code_FAQ.pdf
 def activation_quant(x):
-    """ Per−token quantization to 8 bits. No grouping is needed for quantization.
+    """ Per token quantization to 8 bits. No grouping is needed for quantization.
     Args:
     x: an activation tensor with shape [n, d]
     Returns:
